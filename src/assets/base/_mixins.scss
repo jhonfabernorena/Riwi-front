@@ -1,0 +1,52 @@
+/* Mixins Generales */
+
+/* Padding */
+@for $i from 1 through 100 {
+    .p-#{$i} {
+        padding: $i+px !important;
+    }
+}
+
+/* Font Size */
+@for $i from 5 through 50 {
+    .f-#{$i} {
+        font-size: $i+px !important;
+    }
+}
+
+/* Width */
+@for $i from 1 through 100 {
+    .w-#{$i} {
+        width: $i*1% !important;
+    }
+}
+
+/* Height */
+@for $i from 1 through 100 {
+    .h-#{$i} {
+        height: $i*1vh !important;
+    }
+}
+
+/* Flexbox */
+.flex {
+    display: flex !important;
+}
+
+@each $direction in (row, column) {
+    .flex-#{$direction} {
+        flex-direction: $direction !important;
+    }
+}
+
+@each $align in (center, start, end, stretch) {
+    .align-#{$align} {
+        align-items: $align !important;
+    }
+}
+
+@each $justify in (center, start, end, between, around) {
+    .justify-#{$justify} {
+        justify-content: $justify !important;
+    }
+}
